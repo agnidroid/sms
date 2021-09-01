@@ -1,0 +1,622 @@
+
+/*                      Javascript                            */
+.label{
+    position: absolute;
+    top: 22px;
+    left: 15px;
+    background-color: white;
+    width: fit-content;
+    padding: 0 5px;
+    pointer-events: none;
+    transform: position;
+}
+#signup-section #cIcon{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 20px;
+    pointer-events: none;
+}
+.fa-times{
+    background-color: red;
+    font-size: 10px;
+}
+.fa-check{
+    background-color: rgb(3, 214, 3);
+    font-size: 10px;
+}
+.fa-eye{
+    display: none;
+    background-color: white;
+}
+.ml-1 {
+    margin-left: 1rem;
+}
+/*               Simple css                      */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+html,body{
+    scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+form fieldset{
+    border: 1px solid rgba(128, 128, 128, 0.575);
+    padding: 30px;
+    border-radius: 7px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+input,select
+{
+    border: 1px rgba(128, 128, 128, 0.575) solid;
+    outline: 0;
+    padding: 13px 15px;
+    margin: 10px 0 !important;
+    width: 100%;
+    font-size: 1em;
+
+}
+button[type= "submit"]{
+    background-color: rgba(0, 89, 255, 0.856);
+    border: 0;
+    outline: 0;
+    padding: 5px 20px;
+    color: ivory;
+    border-radius: 3px;
+    cursor: pointer;
+}
+label{
+    position: absolute;
+    top: 22px;
+    left: 15px;
+    background-color: white;
+    width: fit-content;
+    padding: 0 5px;
+    pointer-events: none;
+    transform: position;
+}
+input:focus ~ label, input:valid ~ label{
+    top: 2px;
+    font-size: 12px;
+    transition: 0.6s;
+}
+select:focus ~ label, select:valid ~ label{
+    top: 2px;
+    font-size: 12px;
+    transition: 0.6s;
+}
+button{
+    outline: 0;
+    border: 0;
+}
+
+/**  LOGIN FORM         */
+#login-section fieldset{
+    padding: 30px 30px 20px 30px;
+    border-radius: 7px;
+}
+#login-section form header{
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+#login-section form #main #fill-up-area{
+    display: grid;
+    margin: 10px 0;
+}
+#login-section form #main #fill-up-area div{
+    position: relative;
+}
+#login-section form #main #fill-up-area span{
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    background-color: white;
+    width: fit-content;
+    padding: 0 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+#login-section form #main #fill-up-area input{
+    width: 100%;
+}
+#login-section form #main #submit-area{
+    text-align: right;
+}
+#login-section #error-box{
+    margin: 0 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    color: white;
+    background-color: red;
+    padding: 10px 0;
+    font-size: 14px;
+    visibility: hidden;
+}
+#login-section form #main #submit-area div{
+    margin: 40px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/**
+@media screen and (max-width: 353px)
+{
+    input,select
+    {
+        border: 1px rgba(128, 128, 128, 0.575);
+        border-style: none none solid;
+        outline: 0;
+        padding: 13px 15px;
+        margin: 10px 5px;
+        font-size: 1em;
+
+    }
+    form fieldset{
+        padding: 20px 10px;
+        border-radius: 7px;
+    }
+}
+
+/**  SIGNUP FORM         */
+#signup-section #cIcon{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 20px;
+    pointer-events: none;
+}
+#signup-section form #main #fill-up-area span{
+    padding: 0 10px;
+    margin-top: 10px;
+}
+#signup-section #gender-container{
+    margin: 10px 10px 10px 0;
+}
+input[type = "email"], input[type = 'tel'], input[type = 'text'], select[name = "gender"]{
+    width: 100%;
+}
+#signup-section #dob-container{
+    justify-content: space-between;
+    align-items: center;
+}
+input[type="date"]{
+    width: 75%;
+}
+#signup-section form header{
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgb(90, 88, 88);
+}
+#signup-section form #main #fill-up-area div{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#signup-section form #main #fill-up-area #password-container {
+    display: flex;
+}
+#signup-section form #main #fill-up-area #password-container > div  {
+    flex: 1;
+}
+#signup-section form #main #fill-up-area #password-container > div input  {
+    width: 100%;
+}
+#signup-section form #main #fill-up-area #password-container span{
+    position: absolute;
+    right: 15px;
+    width: fit-content;
+    padding: 0 5px;
+    margin: 0 0 2px 0;
+    cursor: pointer;
+    background-color: #fff;
+}
+#signup-section form #main #fill-up-area > div{
+    margin: 20px 0 0 0;
+    display: flex;
+}
+#signup-section form #main #fill-up-area #error-box{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    color: white;
+    background-color: red;
+    padding: 10px 0;
+    font-size: 14px;
+    visibility: hidden;
+}
+#signup-section form #main #submit-area{
+    margin: 40px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/**/
+@media screen and (max-width: 553px)
+{
+    input,select
+    {
+        border: 1px rgba(128, 128, 128, 0.575) solid;
+        outline: 0;
+        padding: 13px 13px;
+        margin: 10px 5px;
+        font-size: 1em;
+
+    }
+    form fieldset{
+        padding: 20px 4px;
+        border-radius: 7px;
+    }
+    input[type = "radio"]{
+        margin: 0 10px;
+    }
+    #signup-section form #main #fill-up-area #gender-container{
+        /* margin: 20px 20px 20px 0; */
+        justify-content: space-between;
+    }
+    #male{
+        margin-left: auto;
+    }
+}
+@media screen and (max-width: 491px)
+{
+    #name-container, #password-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    #password-container div {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
+    .ml-1 {
+        margin-left: 0;
+    }
+    section {
+        width: 100%;
+    }
+    /* #signup-section form #main #fill-up-area #gender-container{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 10px 0 0px;
+    }
+    #name-container div , #password-container div{
+        width: 100%;
+    }
+    input[type = "text"],input[type = "password"],input[type = "tel"],input[type = "email"]
+    {
+        width: 100%;
+    } */
+}
+
+/**/
+#user-section{
+    padding: 0;
+    margin: 0;
+    background-color: rgba(128, 128, 128, 0.575);
+    display: flex;
+    flex-direction: column;
+}
+#user-section #photo{
+    margin: 20px 0 0;
+    width: 70%;
+    background-color: saddlebrown;
+    margin: 20px 0;
+
+
+    display: flex;
+    flex-direction: column;
+}
+#user-section #photo #cover{
+    height: 450px;
+}
+#user-section #photo #profile-pic{
+    background-color: red;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+}
+img[src = "2.0.jpg"]{
+    width: 100%;
+    border-radius: 50%;
+}
+#user-section #photo #profile-pic div:first-child{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px 0;
+    position: absolute;
+    bottom: 40px;
+}
+#user-section #photo #profile-pic div:last-child{
+    margin-top: 50px;
+}
+#profile{
+    width: 70%;
+    margin: 0 0 20px 0;
+    background-color: seagreen;
+
+}
+#user-section #profile header{
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    background-color: violet;
+}
+#user-section #profile div{
+    background-color: greenyellow;
+    width: 100%;
+    padding: 20px;
+    margin: 5px 0 0 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+/* USER PROFILE *
+#user-section{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+}
+#user-photo{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    background-color: silver;
+}
+#user-photo #cover-photo{
+    width: 80%;
+    height: 400px;
+    background-color: red;
+}
+#user-photo #profile-photo{
+    width: fit-content;
+    display: flex;
+    background-color: rgba(255, 166, 0, 0.205);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 70px;    
+}
+#user-photo #profile-photo > div:first-child{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+           /*        * Forgot password  email*          */
+#forgot-pass-email button[type = "button"]{
+    
+    background-color: rgba(0, 89, 255, 0.856);
+    border: 0;
+    outline: 0;
+    padding: 5px 20px;
+    color: ivory;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#forgot-pass-email{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+#forgot-pass-email > div{
+    width: 450px;
+    padding: 10px 30px;
+    border: 1px solid grey;
+}
+#forgot-pass-email  div,#forgot-pass-email  header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+}
+#forgot-pass-email div form input{
+    margin: 30px 0;
+}
+#forgot-pass-email div form button{
+    width: fit-content;
+    margin: 20px 0 10px auto;
+}
+
+            /*        * Forgot password *          */
+#forgot-pass{
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    background-color: #262626;
+    width: 100%;
+    height: 100vh;
+}
+#forgot-pass .fa-times{
+    background-color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+#forgot-pass > div{
+    width: 500px;
+    margin-top: 20px;
+    background-color: #262626;
+    border: 2px solid whitesmoke;
+    padding: 10px;
+}
+#forgot-pass form div{
+    display: flex;
+    justify-content: space-between;
+}
+#forgot-pass form span, #forgot-pass form > a{
+    font-size: 13px;
+}
+#forgot-pass button[type= "button"]{
+    background-color: grey;
+    border: 0;
+    outline: 0;
+    padding: 5px 20px;
+    color: ivory;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#forgot-pass input, #forgot-pass button{
+    width: 100%;
+    margin: 10px 0;
+}
+#forgot-pass div{
+    outline: 0;
+    margin-bottom: 10px;
+}
+#forgot-pass header{
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    margin-bottom: 40px;
+    color: silver;
+}
+#forgot-pass header span{
+    outline: 0;
+    border: 2px solid rgba(128, 128, 128, 0.575);
+    border-radius: 20px;
+    width: fit-content;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 520px)
+{
+    #forgot-pass{
+        margin: 80px 0;
+        text-align: center;
+        border: 1px solid rgba(128, 128, 128, 0.575);
+        width: 100%;
+        padding: 30px 10px;
+    }
+    #forgot-pass form{
+        width: 100%;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 467px)
+{
+    #forgot-pass header h1{
+        font-size: 30px;
+    }
+}
+
+
+            /*   *   new password   *    */
+#newPassword{
+    margin: 20px auto;
+    width: 500px;
+    border: 1px solid rgba(128, 128, 128, 0.575);
+    padding: 30px;
+    border-radius: 7px;
+}
+#newPassword header{
+    margin-bottom: 20px;
+}
+#newPassword h1{
+    font-size: 35px;
+}
+#newPassword #submit-area{
+    justify-content: space-between;
+}
+#newPassword #fillUpArea div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+#newPassword  #fillUpArea input{
+    width: 100%;
+}
+#newPassword .fa{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: fit-content;
+    padding: 0 5px;
+    margin: 0 0 2px 0;
+    cursor: pointer;
+}
+#newPassword #fillUpArea label{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: none;
+    width: auto;
+    padding: 0 10px;
+    pointer-events: none;
+}
+#newPassword form #main #submit-area{
+    margin: 50px 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 520px)
+{
+    #newPassword{
+        margin: 80px 0;
+        width: 100%;
+        padding: 30px 10px;
+    }
+    #newPassword form{
+        width: 100%;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 467px)
+{
+    #newPassword header h1{
+        font-size: 28px;
+    }
+}
